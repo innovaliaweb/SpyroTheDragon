@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9C27B0">
+
+    <!-- Título grande BIENVENIDO -->
+    <TextView
+        android:id="@+id/txtBienvenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BIENVENIDO"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <!-- Texto de preparación -->
+    <TextView
+        android:id="@+id/txtPreparate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prepárate para explorar el mundo mágico de esta aplicación inspirada en"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_below="@id/txtBienvenido"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp" />
+
+    <!-- Logo de Spyro -->
+    <ImageView
+        android:id="@+id/logoSpyro"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/skill_points"
+        android:layout_below="@id/txtPreparate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true" />
+
+    <!-- Texto de descripción -->
+    <TextView
+        android:id="@+id/txtDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aquí aprenderás a navegar por pestañas llenas de dragones, mundos fascinantes y montones de tesoros brillantes."
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_below="@id/logoSpyro"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp" />
+
+    <!-- Texto de pregunta -->
+    <TextView
+        android:id="@+id/txtListo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Listo para empezar?"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtDescripcion"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp" />
+
+    <!-- Texto de instrucción -->
+    <TextView
+        android:id="@+id/txtInstruccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pulsa 'Comenzar' y deja que Spyro te lleve volando a través de esta guía interactiva."
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_below="@id/txtListo"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp" />
+
+    <!-- Imagen de Spyro volando -->
+    <ImageView
+        android:id="@+id/imgSpyroVolando"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:src="@drawable/spyro"
+        android:layout_below="@id/txtInstruccion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botón de comenzar con forma de diamante -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgSpyroVolando"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+        
+        <ImageButton
+            android:id="@+id/btnComenzar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/gems"
+            android:scaleType="fitCenter"
+            android:background="@null" />
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMENZAR"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <!-- Botón de omitir (oculto en esta pantalla) -->
+    <Button
+        android:id="@+id/btnFinalizarGuia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Omitir"
+        android:visibility="gone" />
+</RelativeLayout>

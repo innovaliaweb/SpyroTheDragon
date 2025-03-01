@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Círculo base con borde morado -->
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="3dp" android:color="#9C27B0" />
+            <solid android:color="#33FFFFFF" />
+            <size android:width="50dp" android:height="50dp" />
+        </shape>
+    </item>
+</layer-list>

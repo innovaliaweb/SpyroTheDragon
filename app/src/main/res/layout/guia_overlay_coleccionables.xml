@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Círculo morado con texto y botones -->
+    <RelativeLayout
+        android:id="@+id/bocadillo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="85dp"
+        android:background="@drawable/bocadillo_circular">
+
+        <!-- Texto del bocadillo - muy arriba -->
+        <TextView
+            android:id="@+id/textoGuia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:layout_marginStart="20dp"
+            android:text="Aquí verás todos los objetos coleccionables"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <!-- Botones de navegación dentro del bocadillo - muy abajo -->
+        <LinearLayout
+            android:id="@+id/botonesNavegacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Botón omitir (icono X) -->
+            <ImageButton
+                android:id="@+id/btnOmitir"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="25dp"
+                android:background="@null"
+                android:contentDescription="Omitir"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="#FFFFFF" />
+
+            <!-- Botón siguiente (icono flecha) -->
+            <ImageButton
+                android:id="@+id/btnSiguiente"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:background="@null"
+                android:contentDescription="Siguiente"
+                android:src="@android:drawable/ic_media_play"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Círculo indicador para señalar el menú de coleccionables - MORADO -->
+    <View
+        android:id="@+id/flecha"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/flecha_indicadora_morada" />
+</FrameLayout>

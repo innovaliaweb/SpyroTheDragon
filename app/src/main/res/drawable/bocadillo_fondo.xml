@@ -1,0 +1,28 @@
+<!-- res/drawable/bocadillo_bg.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 1. Cuerpo del bocadillo -->
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+            <!-- Color morado sólido para el fondo -->
+            <solid android:color="#9C27B0" />
+            <!-- Esquinas muy redondeadas para dar forma ovalada -->
+            <corners android:radius="30dp"/>
+        </shape>
+    </item>
+
+    <!-- 2. Flecha en forma de "diamante" rotado -->
+    <item
+        android:gravity="bottom|center_horizontal"
+        android:bottom="0dp">
+        <rotate
+            android:fromDegrees="45"
+            android:toDegrees="45">
+            <shape android:shape="rectangle">
+                <solid android:color="#CC000000" />
+                <!-- Tamaño del pequeño cuadrado que hará de flecha -->
+                <size android:width="16dp" android:height="16dp" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

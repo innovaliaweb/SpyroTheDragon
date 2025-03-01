@@ -22,6 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".guias.GuiaPantalla1Activity" android:exported="false"/>
+        <activity android:name=".guias.GuiaPantalla2Activity" android:exported="false"/>
+        <activity android:name=".guias.GuiaPantalla3Activity" android:exported="false"/>
+        <activity android:name=".guias.GuiaPantalla4Activity" android:exported="false"/>
+        <activity android:name=".guias.GuiaPantalla5Activity" android:exported="false"/>
+        <activity android:name=".guias.GuiaPantalla6Activity" android:exported="false"/>
+        <activity android:name=".easterEggs.VideoEasterEggActivity" 
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".easterEggs.FireAnimationActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

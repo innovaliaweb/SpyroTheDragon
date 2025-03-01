@@ -1,5 +1,7 @@
 package dam.pmdm.spyrothedragon;
 
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +15,8 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
 import dam.pmdm.spyrothedragon.databinding.ActivityMainBinding;
+import dam.pmdm.spyrothedragon.guias.GuiaDialogFragment;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -47,7 +51,17 @@ public class MainActivity extends AppCompatActivity {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
         });
-
+        
+        // Verificar si la guía ya ha sido completada y mostrarla si es necesario
+        // Hacerlo con un pequeño retraso para evitar bloquear la UI
+        binding.getRoot().post(() -> {
+            SharedPreferences prefs = getSharedPreferences("GuiaSpyro", MODE_PRIVATE);
+            boolean guiaCompletada = prefs.getBoolean("guiaCompletada", false);
+            
+            if (!guiaCompletada) {
+                mostrarGuia(1);
+            }
+        });
     }
 
     private boolean selectedBottomMenu(@NonNull MenuItem menuItem) {
@@ -88,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+    private void mostrarGuia(int pantalla) {
+        GuiaDialogFragment guiaDialog = GuiaDialogFragment.newInstance(pantalla);
+        guiaDialog.show(getSupportFragmentManager(), "GuiaDialog");
+    }
 
 
 }

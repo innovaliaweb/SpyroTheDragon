@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!-- Contenedor para las diferentes pantallas de la guía -->
+    <FrameLayout
+        android:id="@+id/contenedorGuia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Indicadores de progreso en la parte inferior (opcional) -->
+    <LinearLayout
+        android:id="@+id/indicadoresProgreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/indicador1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/indicador_activo" />
+
+        <View
+            android:id="@+id/indicador2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/indicador_inactivo" />
+
+        <View
+            android:id="@+id/indicador3"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/indicador_inactivo" />
+
+        <View
+            android:id="@+id/indicador4"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/indicador_inactivo" />
+
+        <View
+            android:id="@+id/indicador5"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/indicador_inactivo" />
+
+        <View
+            android:id="@+id/indicador6"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/indicador_inactivo" />
+    </LinearLayout>
+</RelativeLayout>
