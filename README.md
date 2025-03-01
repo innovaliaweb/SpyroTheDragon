@@ -1,4 +1,4 @@
-# Spyro The Dragon - Aplicación Android
+# El Dragón Spyro - Aplicación Android
 
 ## Introducción
 Esta aplicación Android está inspirada en la saga de videojuegos "Spyro The Dragon". Permite a los usuarios explorar información sobre los personajes, mundos y coleccionables del universo de Spyro, además de incluir guías interactivas y Easter Eggs para los fans de la saga.
@@ -43,4 +43,4 @@ El desarrollo de esta aplicación me ha permitido profundizar en diversos aspect
 El mayor desafío fue la implementación del Easter Egg de la animación de fuego, que requirió entender cómo posicionar correctamente elementos visuales sobre otros componentes de la interfaz.
 
 ## Capturas de pantalla
-*(Aquí puedes añadir imágenes de tu aplicación cuando lo desees)*
+
